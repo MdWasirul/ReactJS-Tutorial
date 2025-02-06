@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#headerComponent {
+    background-color: beige;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* height: 200px; */
+}
+
+#logo img {
+    height: 100px;
+
+
+}
+
+#userIcon img {
+    height: 100px;
+
+}
+
+#Search {
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#input-search {
+    padding: 5px;
+    border: 2px solid #52a6f9;
+    outline: none;
+
+}
