@@ -51,7 +51,7 @@
     padding: 5px;
     /* height: 450px; */
     width: 260px;
-    margin: 15px;  
+    margin: 15px;
 }
 
 .res-card:hover {
@@ -65,4 +65,14 @@
     width: 100%;
     border-radius: 10px;
 
+}
+
+.filter-btn {
+    margin: 10px;
+    cursor: pointer;
+    
+}
+.filter-btn:hover{
+    background-color: #2e2e2e;
+    color: white;
 }
