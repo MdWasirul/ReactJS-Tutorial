@@ -32,12 +32,11 @@ alt="rating-circled"
 // restaurants Image -->
 // https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/wqosucfihcmzg1dyqc2k
 
-
-/*
+/_
 this two at same time throw error
 export default CDN_URL;
 export default LOGO_URL;
-*/
+_/
 
 Two types of export/Import
 
@@ -49,3 +48,10 @@ import component form "path";
 -Named export /import
 export const Component;
 import {Component} from "path";
+
+# React Hooks
+
+(Normal JS utility Function) -->written By FaceBook Developer
+
+-useState()---> SuperPowerful state variable in React.
+-useEffect()

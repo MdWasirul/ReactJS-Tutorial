@@ -1,67 +1,11 @@
 import RestaurantCard from "./RestaurantCard";
 import resObjLIst from "../utils/mockData";
-
-// Now we use State Variable-->SuperPower Of React ---> We Use HookS -->useState();
-
-// niormal javascript variable
-let listOfRestaurants = [
-  {
-    info: {
-      id: "10492",
-      name: "Pizza Hut",
-      cloudinaryImageId:
-        "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/ef7ea2a1-7657-4a33-8f15-ad2521674114_10492.jpg",
-
-      costForTwo: "₹350 for two",
-      cuisines: ["Pizzas"],
-      avgRating: 3.4,
-      parentId: "721",
-      avgRatingString: "3.8",
-      totalRatingsString: "29K+",
-      sla: {
-        deliveryTime: 48,
-      },
-    },
-  },
-  {
-    info: {
-      id: "10493",
-      name: "MAC DONALD'S",
-      cloudinaryImageId:
-        "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/ef7ea2a1-7657-4a33-8f15-ad2521674114_10492.jpg",
-
-      costForTwo: "₹350 for two",
-      cuisines: ["Pizzas"],
-      avgRating: 3.1,
-      parentId: "721",
-      avgRatingString: "4.2",
-      totalRatingsString: "29K+",
-      sla: {
-        deliveryTime: 48,
-      },
-    },
-  },
-  {
-    info: {
-      id: "10494",
-      name: "MCD",
-      cloudinaryImageId:
-        "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/ef7ea2a1-7657-4a33-8f15-ad2521674114_10492.jpg",
-
-      costForTwo: "₹350 for two",
-      cuisines: ["Pizzas"],
-      avgRating: 4.1,
-      parentId: "721",
-      avgRatingString: "4.1",
-      totalRatingsString: "29K+",
-      sla: {
-        deliveryTime: 48,
-      },
-    },
-  },
-];
+import { useState } from "react";
 
 const Body = () => {
+  // Now we use State Variable-->SuperPower Of React ---> We Use HookS -->useState();
+  const [ListOfRestaurants, setListOfRestaurants] = useState(resObjLIst);
+
   return (
     <div className="body">
       {/* <div className="search">Search</div> */}
@@ -71,17 +15,17 @@ const Body = () => {
           onClick={() => {
             //filter logic here
             // console.log("btn clicked ");
-            listOfRestaurants = listOfRestaurants.filter(
-              (res) => res.info.avgRatingString > 4
+            const filteredList = ListOfRestaurants.filter(
+              (res) => res.info.avgRating > 4
             );
-            console.log(listOfRestaurants);
+            setListOfRestaurants(filteredList);
           }}
         >
           Top Rated Restaurants
         </button>
       </div>
       <div className="res-container">
-        {listOfRestaurants.map((restaurant) => (
+        {ListOfRestaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
