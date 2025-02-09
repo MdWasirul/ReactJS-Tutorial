@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Body = () => {
   // Now we use State Variable-->SuperPower Of React ---> We Use HookS -->useState();
-  const [ListOfRestaurants, setListOfRestaurants] = useState(resObjLIst);
+  const [ListOfRestaurants, setListOfRestaurants] = useState(resObjLIst); 
 
   return (
     <div className="body">
@@ -13,8 +13,6 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            //filter logic here
-            // console.log("btn clicked ");
             const filteredList = ListOfRestaurants.filter(
               (res) => res.info.avgRating > 4
             );

@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 
 // console.log(resObjLIst);
-
+// console.log(<Body/>)  //---Gives Object
 const Footer = () => {};
 const AppLayout = () => {
   return (
