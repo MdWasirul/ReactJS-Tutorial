@@ -3,7 +3,7 @@ const resObjLIst = [
   {
     info: {
       id: "10492",
-      name: "Pizza Hut",
+      name: "KFC ",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/ef7ea2a1-7657-4a33-8f15-ad2521674114_10492.jpg",
       locality: "Madhapur",
@@ -79,7 +79,7 @@ const resObjLIst = [
   {
     info: {
       id: "11698",
-      name: "Burger King",
+      name: "Mehfil's",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/11/7f76a072-c1bc-4d74-ac56-33e0eea20c1e_11698.JPG",
       locality: "Madhapur",
@@ -163,7 +163,7 @@ const resObjLIst = [
   {
     info: {
       id: "8027",
-      name: "Chili's American Grill & Bar",
+      name: "Bawarchi Pista House",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/5/1fe28b93-b144-4751-9043-331ecefd3b9d_8027.jpg",
       locality: "Madhapur",
