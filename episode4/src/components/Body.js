@@ -2,6 +2,8 @@ import RestaurantCard from "./RestaurantCard";
 import resObjLIst from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { SWIGGY_URL } from "../utils/constant";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // Now we use State Variable-->SuperPower Of React ---> We Use HookS -->useState();
@@ -15,11 +17,9 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const response = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3554218&lng=78.59488759999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const response = await fetch(SWIGGY_URL);
     const jsonData = await response.json();
-    // console.log(jsonData);
+    console.log(jsonData);
     setListOfRestaurants(
       jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
@@ -74,7 +74,12 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurantList.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          <Link
+            key={restaurant.info.id}
+            to={"/restaurants/" + restaurant.info.id}
+          >
+            <RestaurantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>

@@ -323,3 +323,8 @@ That's all there is for now, but this document is nowhere near complete. Future 
 
 ## Related Videos
 - [What's Next for React (ReactNext 2016)](https://youtu.be/aV1271hd9ew)
+
+
+#Two Types of Routing ...
+1. Client Side Routing.
+2. Server-side Routing.
