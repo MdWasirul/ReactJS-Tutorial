@@ -328,3 +328,21 @@ That's all there is for now, but this document is nowhere near complete. Future 
 #Two Types of Routing ...
 1. Client Side Routing.
 2. Server-side Routing.
+
+
+#Class Base Components
+/***
+ *
+ * --MOUNTINGS--
+ * Render(dummy)
+ *  <HTML DUMMY >
+ * Component Did Mount
+ *   <API Call>
+ *   <this.setState --> State variable is updatedd
+ *
+ * ---UPDATE
+ *   render (API data)
+ *   <HTML (new API data)>
+ *   componentDid update
+ *
+ */
