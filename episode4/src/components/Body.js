@@ -1,9 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
-import resObjLIst from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { SWIGGY_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   // Now we use State Variable-->SuperPower Of React ---> We Use HookS -->useState();
@@ -29,6 +29,15 @@ const Body = () => {
         ?.restaurants
     );
   };
+
+  const userOneline = useOnlineStatus();
+  if (userOneline === false)
+    return (
+      <h1>
+        Looks like You're Offine !! Please Check Your Internet Connection!
+      </h1>
+    );
+
   return ListOfRestaurants.length == 0 ? (
     <Shimmer />
   ) : (
