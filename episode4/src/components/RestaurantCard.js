@@ -14,11 +14,11 @@ const RestaurantCard = (props) => {
         src={CDN_URL + cloudinaryImageId}
         alt="RestaurantImage"
       />
-      <h3 className="navig-link">{name}</h3>
-      <h4>{cuisines.join(",")}</h4>
-      <h4>{avgRating} Stars</h4>
-      <h4>{costForTwo}</h4>
-      <h4>{sla.slaString}</h4>
+      <h3 className="card-link">{name}</h3>
+      <h4 className="card-link">{cuisines.join(",")}</h4>
+      <h4 className="card-link">{avgRating} Stars</h4>
+      <h4 className="card-link">{costForTwo}</h4>
+      <h4 className="card-link">{sla.slaString}</h4>
     </div>
   );
 };
