@@ -1,30 +1,26 @@
-import React from 'react'
-
+import React from "react";
+import ShimmerCard from "./ShimmerCard";
 const Shimmer = () => {
   return (
-    <div className='shimmer-container'>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
-        <div className='shimmer-card'></div>
+    <div className="flex justify-center items-center flex-wrap bg-gray-100">
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
+      <ShimmerCard />
     </div>
-  )
-}
+  );
+};
 
-export default Shimmer
+export default Shimmer;

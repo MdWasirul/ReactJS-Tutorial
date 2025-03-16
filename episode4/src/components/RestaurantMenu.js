@@ -18,34 +18,43 @@ const RestaurantMenu = () => {
   return resInfo === null ? (
     <Shimmer />
   ) : (
-    <div className="resFoodInfo">
-      <h1>{name}</h1>
-      <p className="cuisine">
-        {cuisines.join(",")}- {costForTwoMessage}
-      </p>
-
-      <h2>Recommended ({itemCards.length})</h2>
-      <ul className="listsItems">
-        {itemCards.map((item) => (
-          <li key={item.card.info.id} className="listItem">
-            <h3>{item.card.info.name}</h3>
-            <img
-              src={CDN_URL + item.card.info.imageId}
-              alt="food_image"
-              className="foodImage"
-            />
-            <h3>
-              {"₹"}{" "}
-              {item.card.info.defaultPrice / 100 || item.card.info.price / 100}
-            </h3>
-            <p>{item.card.info.description}</p>
-          </li>
-        ))}
-        {/* <li>{itemCards[0].card.info.name}</li>
-        <li>{itemCards[1].card.info.name}</li>
-        <li>{itemCards[2].card.info.name}</li>
-        <li>{itemCards[3].card.info.name}</li> */}
-      </ul>
+    <div className=" flex justify-center items-center flex-col bg-gray-200 ">
+      <div className="mt-5">
+        <h1 className="text-4xl font-bold ">{name}</h1>
+        <p className="cuisine font-semibold">
+          {cuisines.join(",")}- {costForTwoMessage}
+        </p>
+      </div>
+      <div className="mt-10">
+        <h2 className="text-4xl font-bold text-center ">
+          Recommended ({itemCards.length})
+        </h2>
+        <ul>
+          {itemCards.map((item) => (
+            <li
+              key={item.card.info.id}
+              className=" flex justify-center items-center flex-col flex-wrap border-b-0 my-6 py-5  shadow-lg"
+            >
+              <h3 className="font-bold text-xl px-4 py-2">
+                {item.card.info.name}
+              </h3>
+              <img
+                src={CDN_URL + item.card.info.imageId}
+                alt="food_image"
+                className="w-[300px] rounded-lg"
+              />
+              <h3 className="font-bold text-xl">
+                {"₹"}{" "}
+                {item.card.info.defaultPrice / 100 ||
+                  item.card.info.price / 100}
+              </h3>
+              <p className="text-2xl  font-sans break-words">
+                {item.card.info.description}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

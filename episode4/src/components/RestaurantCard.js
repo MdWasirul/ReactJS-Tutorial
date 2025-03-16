@@ -8,18 +8,33 @@ const RestaurantCard = (props) => {
     resData?.info;
   // console.log(props);
   return (
-    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
+    <div className=" p-3 m-[20px] w-[380px] h-[550px] break-words rounded-lg shadow-md shadow-gray-500  bg-gray-100 hover:bg-gray-200">
       <img
-        className="res-img"
+        className="res-img  rounded-lg"
         src={CDN_URL + cloudinaryImageId}
         alt="RestaurantImage"
       />
-      <h3 className="card-link">{name}</h3>
-      <h4 className="card-link">{cuisines.join(",")}</h4>
-      <h4 className="card-link">{avgRating} Stars</h4>
-      <h4 className="card-link">{costForTwo}</h4>
-      <h4 className="card-link">{sla.slaString}</h4>
+      <h3 className="py-4 font-bold text-2xl">{name}</h3>
+      <h4 className="py-2 text-xl font-sans">{cuisines.join(",")}</h4>
+      <h4 className="">{avgRating} Stars</h4>
+      <h4 className="font-bold">{costForTwo}</h4>
+      <h4 className=" font-bold">{sla.slaString}</h4>
     </div>
   );
+};
+
+//Higher Order Component
+
+//input- RestaurantCard ==> RestaurantCardPromoted
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label>Promoted</label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 export default RestaurantCard;
