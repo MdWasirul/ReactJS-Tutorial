@@ -1,7 +1,6 @@
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Shimmer from "./Shimmer";
-import { SWIGGY_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useRestaurants from "../utils/useRestaurants";
@@ -14,9 +13,7 @@ const Body = () => {
   } = useRestaurants();
   const [searchText, setSearchText] = useState("");
   // console.log("resList : ", ListOfRestaurants);
-
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
-
   const userOnline = useOnlineStatus();
   if (userOnline === false)
     return (
