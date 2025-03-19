@@ -1,9 +1,10 @@
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useRestaurants from "../utils/useRestaurants";
+import UserContext from "../utils/userContext";
 
 const Body = () => {
   const {
@@ -15,6 +16,7 @@ const Body = () => {
   // console.log("resList : ", ListOfRestaurants);
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   const userOnline = useOnlineStatus();
+
   if (userOnline === false)
     return (
       <h1>
@@ -22,11 +24,13 @@ const Body = () => {
       </h1>
     );
 
+  const { LoggedInUser, setUserName } = useContext(UserContext);
+
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="">
-      <div className="flex items-center justify-center flex-wrap sticky top-[110px] bg-gray-100 sm:bg-green-200">
+      <div className="flex items-center justify-evenly flex-wrap sticky top-[110px] bg-gray-100 sm:bg-green-200">
         <div className="m-4 p-4 ">
           <input
             className=" border-2 border-gray-700 w-80 outline-none rounded-sm p-1"
@@ -64,6 +68,15 @@ const Body = () => {
           >
             Top Rated Restaurants
           </button>
+        </div>
+        <div>
+          <label>UserName: </label>
+          <input
+            type="text"
+            className="border border-red-700 bg-gray-200 py-2"
+            value={LoggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
         </div>
       </div>
       <div className="flex flex-wrap justify-evenly mt-8">
