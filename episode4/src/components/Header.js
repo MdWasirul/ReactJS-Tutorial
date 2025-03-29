@@ -3,18 +3,28 @@ import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/userContext";
+import { useSelector } from "react-redux";
+
 const Header = () => {
   // let btnName = "Login";
-  const [btnNameReact, setBtnNameReact] = useState("Login");
   // console.log("Header rendered");
-  useEffect(() => {
-    // console.log("UseEffect called!");
-  }, [btnNameReact]);
+
+  const [btnNameReact, setBtnNameReact] = useState("Login");
+  const userOnlineStatus = useOnlineStatus();
 
   const { LoggedInUser } = useContext(UserContext);
   console.log(LoggedInUser);
 
-  const userOnlineStatus = useOnlineStatus();
+  useEffect(() => {
+    // console.log("UseEffect called!");
+  }, [btnNameReact]);
+
+  //Selector
+  //Subscribing  the store  using Selector
+
+  const cartItem = useSelector((store) => store.cart.items);
+  console.log(cartItem);
+
   return (
     <div className="flex justify-between flex-wrap bg-orange-600 text-white  text-[20px] shadow-lg sticky top-0">
       <div className="w-36">
@@ -45,7 +55,11 @@ const Header = () => {
               Grocery
             </Link>
           </li>
-          <li className="px-2">Cart</li>
+          <li className="px-2">
+            <Link to="/cart" className="nav-link">
+              Cart- ({cartItem.length} items)
+            </Link>
+          </li>
           <button
             className="login"
             onClick={() => {

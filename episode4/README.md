@@ -346,3 +346,11 @@ That's all there is for now, but this document is nowhere near complete. Future 
  *   componentDid update
  *
  */
+#Redux Toolkit
+-install @redux js / toolkit and react- redux
+- Build our Store
+-Connect our Store to our app
+-Slice (cartSlice)
+
+-dispatch (action)
+-Selector
