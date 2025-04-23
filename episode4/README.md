@@ -354,3 +354,14 @@ That's all there is for now, but this document is nowhere near complete. Future 
 
 -dispatch (action)
 -Selector
+
+# Type of testing(as Developer)
+ -Unit Testing
+ -Integration Testing
+ -End to End Testing (E-2-E) 
+
+ # Setting up Testing in Our app
+ -Install react testing Library.
+ -installed jest.
+ -installed Babel dependencies.
+ -Configure Babel
