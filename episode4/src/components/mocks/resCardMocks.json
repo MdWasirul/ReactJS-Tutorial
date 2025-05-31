@@ -1,0 +1,85 @@
+[
+  {
+    "info": {
+      "id": "699662",
+      "name": "Theobroma",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/9/05597efd-9343-4a28-b778-1d1254234951_699662.jpg",
+      "locality": "Bharath Nagar",
+      "areaName": "Uppal",
+      "costForTwo": "₹400 for two",
+      "cuisines": ["Desserts"],
+      "avgRating": 4.6,
+      "parentId": "1040",
+      "avgRatingString": "4.6",
+      "totalRatingsString": "2.1K+",
+      "sla": {
+        "deliveryTime": 51,
+        "lastMileTravel": 9.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "50-55 mins",
+        "lastMileTravelString": "9.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2025-05-22 00:00:00",
+        "opened": true
+      },
+      "badges": {
+        "imageBadges": [
+          {
+            "imageId": "Rxawards/_CATEGORY-Desserts.png",
+            "description": "Delivery!"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "description": "Delivery!",
+                  "imageId": "Rxawards/_CATEGORY-Desserts.png"
+                }
+              }
+            ]
+          },
+          "textBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "50% OFF",
+        "discountTag": "FLAT DEAL"
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {},
+      "externalRatings": {
+        "aggregatedRating": {
+          "rating": "4.0",
+          "ratingCount": "324"
+        },
+        "source": "GOOGLE",
+        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+      },
+      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+      "context": "seo-data-db129bda-eb0d-40e3-9d02-cb5536468797"
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/city/hyderabad/theobroma-bharath-nagar-uppal-rest699662",
+      "type": "WEBLINK"
+    }
+  }
+]

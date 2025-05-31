@@ -365,3 +365,9 @@ That's all there is for now, but this document is nowhere near complete. Future 
  -installed jest.
  -installed Babel dependencies.
  -Configure Babel
+ -Configure parcel config file to disable default babel transpilation
+ -jest -npx jest --init
+ -install jsdom library
+ -install @babel/preset-react to make JSX work in test cases
+ -inlcude @babel/preset-react inside my babel configuration
+
